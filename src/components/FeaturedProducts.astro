@@ -1,93 +1,94 @@
----
-const products = [
-  {
-    title: "Electric Roller Cover",
-    image: "/images/products/roller-cover.jpg",
-    href: "/accessories"
-  },
-  {
-    title: "Sports Bar",
-    image: "/images/products/sports-bar.jpg",
-    href: "/accessories"
-  },
-  {
-    title: "Canopies",
-    image: "/images/products/canopy.jpg",
-    href: "/accessories"
-  },
-  {
-    title: "Bull Bars",
-    image: "/images/products/bull-bar.jpg",
-    href: "/accessories"
-  }
-];
----
-
-<section class="featured-products">
+<section>
 
     <div class="container">
 
-        <div class="section-heading">
+        <h2 class="section-title">
+            Featured Accessories
+        </h2>
 
-            <span class="section-tag">
-                FEATURED PRODUCTS
-            </span>
-
-            <h2>
-                Premium Accessories
-                <br />
-                Built to Last
-            </h2>
-
-            <p>
-                Upgrade your ute with premium accessories designed for
-                Australian conditions. Professional installation available.
-            </p>
-
-        </div>
+        <p class="section-subtitle">
+            Our most popular upgrades for modern utes.
+        </p>
 
         <div class="products-grid">
 
-            {
-                products.map(product => (
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="/images/roller-cover.jpg"
+                        alt="Electric Roller Cover">
+                </div>
+
+                <div class="product-content">
+
+                    <h3>Electric Roller Cover</h3>
+
+                    <p>
+                        Secure, remote-controlled roller covers designed for everyday convenience and adventure.
+                    </p>
 
                     <a
-                        href={product.href}
-                        class="product-card">
-
-                        <img
-                            src={product.image}
-                            alt={product.title}
-                            loading="lazy" />
-
-                        <div class="product-overlay">
-
-                            <h3>
-                                {product.title}
-                            </h3>
-
-                            <span>
-                                Learn More →
-                            </span>
-
-                        </div>
-
+                        href="/accessories"
+                        class="primary-btn">
+                        Learn More
                     </a>
 
-                ))
-            }
+                </div>
 
-        </div>
+            </article>
 
-        <div class="products-footer">
+            <article class="product-card">
 
-            <a
-                href="/accessories"
-                class="primary-btn">
+                <div class="product-image">
+                    <img
+                        src="/images/sports-bar.jpg"
+                        alt="Sports Bar">
+                </div>
 
-                View All Accessories
+                <div class="product-content">
 
-            </a>
+                    <h3>Sports Bar</h3>
+
+                    <p>
+                        Premium sports bars engineered to improve both style and functionality.
+                    </p>
+
+                    <a
+                        href="/accessories"
+                        class="primary-btn">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img
+                        src="/images/bull-bar.jpg"
+                        alt="Bull Bar">
+                </div>
+
+                <div class="product-content">
+
+                    <h3>Bull Bar</h3>
+
+                    <p>
+                        Heavy-duty protection built for touring, work and serious off-road use.
+                    </p>
+
+                    <a
+                        href="/accessories"
+                        class="primary-btn">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </article>
 
         </div>
 

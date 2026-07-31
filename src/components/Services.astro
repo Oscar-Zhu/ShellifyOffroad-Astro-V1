@@ -1,109 +1,52 @@
----
-
-const services = [
-    {
-        title: "4×4 Accessories",
-        icon: "🛻",
-        description:
-            "Premium roller covers, sports bars, canopies, roof platforms, bull bars, side steps, bonnet protectors, mud flaps and more.",
-        link: "/accessories"
-    },
-
-    {
-        title: "Professional Installation",
-        icon: "🔧",
-        description:
-            "Experienced installation with clean wiring, correct torque specifications and attention to every detail.",
-        link: "/contact"
-    },
-
-    {
-        title: "Vehicle Detailing",
-        icon: "✨",
-        description:
-            "Premium interior and exterior detailing, paint protection and maintenance packages for everyday drivers and enthusiasts.",
-        link: "/detailing"
-    },
-
-    {
-        title: "Custom Builds",
-        icon: "⚙️",
-        description:
-            "Need something unique? We can help design and install accessories tailored to your ute and your lifestyle.",
-        link: "/contact"
-    }
-];
-
----
-
-<section class="services">
+<section>
 
     <div class="container">
 
-        <div class="section-heading">
+        <h2 class="section-title">
+            Our Services
+        </h2>
 
-            <span class="section-tag">
-                OUR SERVICES
-            </span>
-
-            <h2>
-
-                Built Around
-                <br />
-                Your Adventure
-
-            </h2>
-
-            <p>
-
-                Whether you're upgrading a weekend touring vehicle,
-                building a serious work ute or simply keeping your
-                pride and joy spotless, Shellify Offroad delivers
-                premium products with professional workmanship.
-
-            </p>
-
-        </div>
+        <p class="section-subtitle">
+            Everything you need to build the ultimate ute.
+        </p>
 
         <div class="services-grid">
 
-            {
+            <div class="service-card">
 
-                services.map(service => (
+                <h3>
+                    4×4 Accessories
+                </h3>
 
-                    <article class="service-card">
+                <p>
+                    Roller covers, bull bars, sports bars, bonnet protectors, mud flaps, roof racks and premium off-road upgrades.
+                </p>
 
-                        <div class="service-icon">
+            </div>
 
-                            {service.icon}
+            <div class="service-card">
 
-                        </div>
+                <h3>
+                    Professional Installation
+                </h3>
 
-                        <h3>
+                <p>
+                    Clean, reliable installations completed with the correct tools and torque specifications for every vehicle.
+                </p>
 
-                            {service.title}
+            </div>
 
-                        </h3>
+            <div class="service-card">
 
-                        <p>
+                <h3>
+                    Vehicle Detailing
+                </h3>
 
-                            {service.description}
+                <p>
+                    Premium detailing services to keep your ute looking as good as it performs on every adventure.
+                </p>
 
-                        </p>
-
-                        <a
-                            href={service.link}
-                            class="service-link">
-
-                            Learn More →
-
-                        </a>
-
-                    </article>
-
-                ))
-
-            }
+            </div>
 
         </div>
 

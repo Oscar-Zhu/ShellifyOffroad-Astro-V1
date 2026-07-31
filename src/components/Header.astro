@@ -1,75 +1,37 @@
----
+<header>
 
-const hero = {
-    tag: "PREMIUM 4X4 ACCESSORIES • DETAILING",
-    title: "Built for Adventure.",
-    subtitle:
-        "Premium ute accessories, professional installations and detailing services across Sydney. Designed for people who demand quality, reliability and attention to every detail.",
-};
+    <div class="container navbar">
 
----
+        <a href="/" class="logo">
+            Shellify <span>Offroad</span>
+        </a>
 
-<section class="hero">
+        <nav class="nav-links">
 
-    <!-- Background Video -->
-    <video
-        autoplay
-        muted
-        loop
-        playsinline>
+            <a href="/">Home</a>
 
-        <source
-            src="/videos/hero.mp4"
-            type="video/mp4" />
+            <a href="/accessories">Accessories</a>
 
-    </video>
+            <a href="/detailing">Detailing</a>
 
-    <div class="container">
+            <a href="/gallery">Gallery</a>
 
-        <div class="hero-content">
+            <a href="/contact">Contact</a>
 
-            <div class="hero-tag">
-                {hero.tag}
-            </div>
+        </nav>
 
-            <h1>
-                {hero.title}
-            </h1>
+        <div class="nav-right">
 
-            <p>
-                {hero.subtitle}
-            </p>
+            <a
+                href="/contact"
+                class="primary-btn">
 
-            <div class="hero-buttons">
+                Book Now
 
-                <a
-                    href="/accessories"
-                    class="primary-btn">
-
-                    Explore Accessories
-
-                </a>
-
-                <a
-                    href="/contact"
-                    class="secondary-btn">
-
-                    Book Installation
-
-                </a>
-
-            </div>
+            </a>
 
         </div>
 
     </div>
 
-    <div class="scroll-indicator">
-
-        <span>Scroll</span>
-
-        <div class="mouse"></div>
-
-    </div>
-
-</section>
+</header>

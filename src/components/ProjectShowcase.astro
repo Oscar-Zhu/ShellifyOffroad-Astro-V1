@@ -1,103 +1,84 @@
----
-const projects = [
-  {
-    title: "BYD Shark 6",
-    subtitle: "Electric Roller Cover Installation",
-    image: "/images/projects/shark-roller.jpg",
-    description:
-      "Premium electric roller cover professionally installed with concealed wiring and factory-style finish.",
-    tags: ["Roller Cover", "Installation", "BYD Shark 6"]
-  },
-
-  {
-    title: "Ford Ranger",
-    subtitle: "Sports Bar Upgrade",
-    image: "/images/projects/ranger-sportsbar.jpg",
-    description:
-      "Heavy-duty sports bar designed for work and weekend adventures.",
-    tags: ["Sports Bar", "Ford Ranger"]
-  },
-
-  {
-    title: "Toyota Hilux",
-    subtitle: "Bull Bar Installation",
-    image: "/images/projects/hilux-bullbar.jpg",
-    description:
-      "Premium front protection with precise fitment and professional installation.",
-    tags: ["Bull Bar", "Hilux"]
-  }
-];
----
-
-<section class="projects">
+<section>
 
     <div class="container">
 
-        <div class="section-heading">
+        <h2 class="section-title">
+            Recent Projects
+        </h2>
 
-            <span class="section-tag">
-                RECENT PROJECTS
-            </span>
+        <p class="section-subtitle">
+            See some of our latest installations and vehicle builds.
+        </p>
 
-            <h2>
-                Real Builds.
-                <br />
-                Real Customers.
-            </h2>
+        <div class="showcase-grid">
 
-            <p>
-                Every installation reflects our commitment to quality,
-                precision and attention to detail.
-            </p>
+            <article class="showcase-card">
 
-        </div>
+                <div class="showcase-image">
 
-        {
-            projects.map((project,index)=>(
-
-                <div class={`project-row ${index % 2 ? "reverse" : ""}`}>
-
-                    <div class="project-image">
-
-                        <img
-                            src={project.image}
-                            alt={project.title}
-                            loading="lazy"/>
-
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>{project.title}</h3>
-
-                        <h4>{project.subtitle}</h4>
-
-                        <p>{project.description}</p>
-
-                        <div class="project-tags">
-
-                            {
-                                project.tags.map(tag=>(
-                                    <span>{tag}</span>
-                                ))
-                            }
-
-                        </div>
-
-                        <a
-                            href="/gallery"
-                            class="primary-btn">
-
-                            View Project
-
-                        </a>
-
-                    </div>
+                    <img
+                        src="/images/project1.jpg"
+                        alt="BYD Shark 6">
 
                 </div>
 
-            ))
-        }
+                <div class="showcase-content">
+
+                    <h3>BYD Shark 6 Build</h3>
+
+                    <p>
+                        Electric roller cover, bonnet protector and professional installation.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="showcase-card">
+
+                <div class="showcase-image">
+
+                    <img
+                        src="/images/project2.jpg"
+                        alt="Ford Ranger">
+
+                </div>
+
+                <div class="showcase-content">
+
+                    <h3>Ford Ranger Upgrade</h3>
+
+                    <p>
+                        Sports bar, roller cover and premium detailing package.
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="showcase-card">
+
+                <div class="showcase-image">
+
+                    <img
+                        src="/images/project3.jpg"
+                        alt="Toyota Hilux">
+
+                </div>
+
+                <div class="showcase-content">
+
+                    <h3>Toyota Hilux Touring</h3>
+
+                    <p>
+                        Bull bar, roof rack and complete off-road accessory installation.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
 
     </div>
 
