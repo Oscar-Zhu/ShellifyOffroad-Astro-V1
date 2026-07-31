@@ -1,0 +1,89 @@
+---
+const features = [
+  {
+    number: "500+",
+    title: "Installations",
+    description:
+      "Professional installations completed with attention to detail."
+  },
+  {
+    number: "5★",
+    title: "Customer Rating",
+    description:
+      "Trusted by ute owners across Sydney for quality workmanship."
+  },
+  {
+    number: "100%",
+    title: "Quality Focus",
+    description:
+      "Premium accessories installed to manufacturer specifications."
+  },
+  {
+    number: "Mobile",
+    title: "Service",
+    description:
+      "Flexible on-site installation available across the Sydney region."
+  }
+];
+---
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="why-grid">
+
+            <div class="why-left">
+
+                <span class="section-tag">
+                    WHY CHOOSE US
+                </span>
+
+                <h2>
+                    Built on Quality.
+                    <br />
+                    Trusted by Drivers.
+                </h2>
+
+                <p>
+                    At Shellify Offroad, every installation is completed with
+                    precision, proper tools and attention to detail. From
+                    premium accessories to professional detailing, we focus on
+                    delivering results that look great and last.
+                </p>
+
+                <a
+                    href="/contact"
+                    class="primary-btn">
+
+                    Book Your Installation
+
+                </a>
+
+            </div>
+
+            <div class="stats-grid">
+
+                {
+                    features.map(item => (
+
+                        <div class="stat-card">
+
+                            <h3>{item.number}</h3>
+
+                            <h4>{item.title}</h4>
+
+                            <p>{item.description}</p>
+
+                        </div>
+
+                    ))
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

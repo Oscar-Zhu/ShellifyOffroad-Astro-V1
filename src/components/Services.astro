@@ -1,0 +1,112 @@
+---
+
+const services = [
+    {
+        title: "4×4 Accessories",
+        icon: "🛻",
+        description:
+            "Premium roller covers, sports bars, canopies, roof platforms, bull bars, side steps, bonnet protectors, mud flaps and more.",
+        link: "/accessories"
+    },
+
+    {
+        title: "Professional Installation",
+        icon: "🔧",
+        description:
+            "Experienced installation with clean wiring, correct torque specifications and attention to every detail.",
+        link: "/contact"
+    },
+
+    {
+        title: "Vehicle Detailing",
+        icon: "✨",
+        description:
+            "Premium interior and exterior detailing, paint protection and maintenance packages for everyday drivers and enthusiasts.",
+        link: "/detailing"
+    },
+
+    {
+        title: "Custom Builds",
+        icon: "⚙️",
+        description:
+            "Need something unique? We can help design and install accessories tailored to your ute and your lifestyle.",
+        link: "/contact"
+    }
+];
+
+---
+
+<section class="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                OUR SERVICES
+            </span>
+
+            <h2>
+
+                Built Around
+                <br />
+                Your Adventure
+
+            </h2>
+
+            <p>
+
+                Whether you're upgrading a weekend touring vehicle,
+                building a serious work ute or simply keeping your
+                pride and joy spotless, Shellify Offroad delivers
+                premium products with professional workmanship.
+
+            </p>
+
+        </div>
+
+        <div class="services-grid">
+
+            {
+
+                services.map(service => (
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+
+                            {service.icon}
+
+                        </div>
+
+                        <h3>
+
+                            {service.title}
+
+                        </h3>
+
+                        <p>
+
+                            {service.description}
+
+                        </p>
+
+                        <a
+                            href={service.link}
+                            class="service-link">
+
+                            Learn More →
+
+                        </a>
+
+                    </article>
+
+                ))
+
+            }
+
+        </div>
+
+    </div>
+
+</section>

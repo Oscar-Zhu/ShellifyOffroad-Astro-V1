@@ -1,0 +1,96 @@
+---
+const products = [
+  {
+    title: "Electric Roller Cover",
+    image: "/images/products/roller-cover.jpg",
+    href: "/accessories"
+  },
+  {
+    title: "Sports Bar",
+    image: "/images/products/sports-bar.jpg",
+    href: "/accessories"
+  },
+  {
+    title: "Canopies",
+    image: "/images/products/canopy.jpg",
+    href: "/accessories"
+  },
+  {
+    title: "Bull Bars",
+    image: "/images/products/bull-bar.jpg",
+    href: "/accessories"
+  }
+];
+---
+
+<section class="featured-products">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                FEATURED PRODUCTS
+            </span>
+
+            <h2>
+                Premium Accessories
+                <br />
+                Built to Last
+            </h2>
+
+            <p>
+                Upgrade your ute with premium accessories designed for
+                Australian conditions. Professional installation available.
+            </p>
+
+        </div>
+
+        <div class="products-grid">
+
+            {
+                products.map(product => (
+
+                    <a
+                        href={product.href}
+                        class="product-card">
+
+                        <img
+                            src={product.image}
+                            alt={product.title}
+                            loading="lazy" />
+
+                        <div class="product-overlay">
+
+                            <h3>
+                                {product.title}
+                            </h3>
+
+                            <span>
+                                Learn More →
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                ))
+            }
+
+        </div>
+
+        <div class="products-footer">
+
+            <a
+                href="/accessories"
+                class="primary-btn">
+
+                View All Accessories
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>

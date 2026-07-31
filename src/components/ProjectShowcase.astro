@@ -1,0 +1,104 @@
+---
+const projects = [
+  {
+    title: "BYD Shark 6",
+    subtitle: "Electric Roller Cover Installation",
+    image: "/images/projects/shark-roller.jpg",
+    description:
+      "Premium electric roller cover professionally installed with concealed wiring and factory-style finish.",
+    tags: ["Roller Cover", "Installation", "BYD Shark 6"]
+  },
+
+  {
+    title: "Ford Ranger",
+    subtitle: "Sports Bar Upgrade",
+    image: "/images/projects/ranger-sportsbar.jpg",
+    description:
+      "Heavy-duty sports bar designed for work and weekend adventures.",
+    tags: ["Sports Bar", "Ford Ranger"]
+  },
+
+  {
+    title: "Toyota Hilux",
+    subtitle: "Bull Bar Installation",
+    image: "/images/projects/hilux-bullbar.jpg",
+    description:
+      "Premium front protection with precise fitment and professional installation.",
+    tags: ["Bull Bar", "Hilux"]
+  }
+];
+---
+
+<section class="projects">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-tag">
+                RECENT PROJECTS
+            </span>
+
+            <h2>
+                Real Builds.
+                <br />
+                Real Customers.
+            </h2>
+
+            <p>
+                Every installation reflects our commitment to quality,
+                precision and attention to detail.
+            </p>
+
+        </div>
+
+        {
+            projects.map((project,index)=>(
+
+                <div class={`project-row ${index % 2 ? "reverse" : ""}`}>
+
+                    <div class="project-image">
+
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            loading="lazy"/>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>{project.title}</h3>
+
+                        <h4>{project.subtitle}</h4>
+
+                        <p>{project.description}</p>
+
+                        <div class="project-tags">
+
+                            {
+                                project.tags.map(tag=>(
+                                    <span>{tag}</span>
+                                ))
+                            }
+
+                        </div>
+
+                        <a
+                            href="/gallery"
+                            class="primary-btn">
+
+                            View Project
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            ))
+        }
+
+    </div>
+
+</section>

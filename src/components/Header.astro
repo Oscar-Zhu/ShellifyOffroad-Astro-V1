@@ -1,0 +1,75 @@
+---
+
+const hero = {
+    tag: "PREMIUM 4X4 ACCESSORIES • DETAILING",
+    title: "Built for Adventure.",
+    subtitle:
+        "Premium ute accessories, professional installations and detailing services across Sydney. Designed for people who demand quality, reliability and attention to every detail.",
+};
+
+---
+
+<section class="hero">
+
+    <!-- Background Video -->
+    <video
+        autoplay
+        muted
+        loop
+        playsinline>
+
+        <source
+            src="/videos/hero.mp4"
+            type="video/mp4" />
+
+    </video>
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                {hero.tag}
+            </div>
+
+            <h1>
+                {hero.title}
+            </h1>
+
+            <p>
+                {hero.subtitle}
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="/accessories"
+                    class="primary-btn">
+
+                    Explore Accessories
+
+                </a>
+
+                <a
+                    href="/contact"
+                    class="secondary-btn">
+
+                    Book Installation
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="scroll-indicator">
+
+        <span>Scroll</span>
+
+        <div class="mouse"></div>
+
+    </div>
+
+</section>
