@@ -1,15 +1,44 @@
 ---
-const {title='Shellify Offroad'} = Astro.props;
+interface Props {
+  title?: string;
+}
+
+const {
+  title = "Shellify Offroad | Premium 4x4 Accessories & Vehicle Detailing"
+} = Astro.props;
 ---
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>{title}</title>
-<link rel="stylesheet" href="/styles/global.css">
+
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+
+    <meta
+        name="description"
+        content="Premium 4x4 accessories, professional installation and vehicle detailing in Sydney." />
+
+    <meta
+        name="theme-color"
+        content="#0b0b0b" />
+
+    <link
+        rel="stylesheet"
+        href="/styles/global.css" />
+
 </head>
+
 <body>
-<slot />
+
+    <slot />
+
 </body>
+
 </html>
