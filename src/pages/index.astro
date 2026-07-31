@@ -1,4 +1,6 @@
 ---
+import Layout from "../layouts/Layout.astro";
+
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Services from "../components/Services.astro";
@@ -7,9 +9,11 @@ import WhyChooseUs from "../components/WhyChooseUs.astro";
 import ProjectShowcase from "../components/ProjectShowcase.astro";
 ---
 
-<Header />
+<Layout title="Shellify Offroad">
 
-<main>
+  <Header />
+
+  <main>
 
     <Hero />
 
@@ -21,4 +25,6 @@ import ProjectShowcase from "../components/ProjectShowcase.astro";
 
     <ProjectShowcase />
 
-</main>
+  </main>
+
+</Layout>
