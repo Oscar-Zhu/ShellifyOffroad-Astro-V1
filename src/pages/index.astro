@@ -1,30 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
-
-import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import Services from "../components/Services.astro";
-import FeaturedProducts from "../components/FeaturedProducts.astro";
-import WhyChooseUs from "../components/WhyChooseUs.astro";
-import ProjectShowcase from "../components/ProjectShowcase.astro";
+import Layout from '../layouts/Layout.astro'; import Header from '../components/Header.astro'; import Hero from '../components/Hero.astro'; import Services from '../components/Services.astro'; import FeaturedProducts from '../components/FeaturedProducts.astro'; import WhyChooseUs from '../components/WhyChooseUs.astro'; import ProjectShowcase from '../components/ProjectShowcase.astro';
 ---
-
-<Layout title="Shellify Offroad">
-
-    <Header />
-
-    <main>
-
-        <Hero />
-
-        <Services />
-
-        <FeaturedProducts />
-
-        <WhyChooseUs />
-
-        <ProjectShowcase />
-
-    </main>
-
-</Layout>
+<Layout><Header /><main><Hero /><Services /><FeaturedProducts /><WhyChooseUs /><ProjectShowcase /><section class="cta"><div><p>READY TO GET STARTED?</p><h2>Let's build something better.</h2></div><a href="/contact">CONTACT SHELLIFY OFFROAD →</a></section></main><footer>© {new Date().getFullYear()} Shellify Offroad. All rights reserved.</footer></Layout>
+<style>.cta{max-width:1180px;margin:auto;padding:90px 22px;display:flex;justify-content:space-between;align-items:center;gap:25px}.cta p{color:#c9a55b;font-size:11px;font-weight:800;letter-spacing:.16em}.cta h2{color:#fff;font-size:clamp(32px,5vw,52px);margin:10px 0}.cta a{background:#c9a55b;color:#111;padding:16px 22px;text-decoration:none;font-size:11px;font-weight:800;white-space:nowrap}footer{padding:30px;text-align:center;border-top:1px solid #222;color:#666;font-size:12px}@media(max-width:700px){.cta{flex-direction:column;align-items:flex-start}}</style>
