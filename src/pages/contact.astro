@@ -1,5 +1,172 @@
 ---
-import Layout from '../layouts/Layout.astro'; import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
 ---
-<Layout title="Contact | Shellify Offroad"><Header /><main class="page"><div class="contact"><div><p>CONTACT</p><h1>Let's talk about your vehicle.</h1><span>Tell us what you need — accessories, installation or detailing — and we'll help with the next step.</span></div><div class="box"><small>LOCATION</small><h2>Sydney, NSW</h2><small>WEBSITE</small><h2>shellifyoffroad.com.au</h2><small>BOOKING</small><p>Please contact Shellify Offroad directly to arrange a booking.</p></div></div></main></Layout>
-<style>.page{min-height:100vh;background:#0b0b0b}.contact{max-width:1180px;margin:auto;padding:120px 22px;display:grid;grid-template-columns:1.1fr .9fr;gap:80px}.contact>div:first-child>p,.box small{color:#c9a55b;font-size:11px;letter-spacing:.15em;font-weight:800}.contact h1{color:#fff;font-size:clamp(42px,6vw,72px);line-height:1.02;margin:15px 0}.contact>div:first-child>span{color:#999;font-size:18px;line-height:1.7}.box{background:#111;border:1px solid #252525;padding:35px}.box h2{color:#fff;font-size:20px;margin:10px 0 28px}.box p{color:#999;line-height:1.6}@media(max-width:800px){.contact{grid-template-columns:1fr;gap:35px;padding:80px 22px}}</style>
+
+<Layout title="Contact | Shellify Offroad">
+  <Header />
+
+  <main class="page">
+    <div class="contact">
+
+      <!-- LEFT -->
+      <div class="intro">
+        <p class="eyebrow">CONTACT</p>
+
+        <h1>
+          Let's talk about<br />
+          <span>your vehicle.</span>
+        </h1>
+
+        <p class="description">
+          Tell us what you need — accessories, installation or detailing —
+          and we'll help with the next step.
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="box">
+
+        <div class="contact-item">
+          <small>LOCATION</small>
+          <h2>Sydney, NSW</h2>
+        </div>
+
+        <div class="contact-item">
+          <small>WEBSITE</small>
+          <h2>shellifyoffroad.com.au</h2>
+        </div>
+
+        <div class="contact-item">
+          <small>WECHAT</small>
+          <h2>anytime_syd</h2>
+        </div>
+
+        <div class="contact-item booking">
+          <small>BOOKING</small>
+          <p>
+            Please contact Shellify Offroad directly to arrange a booking.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .page {
+    min-height: calc(100vh - 76px);
+    background: #0b0b0b;
+  }
+
+  .contact {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 120px 22px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  /* LEFT */
+
+  .intro {
+    max-width: 650px;
+  }
+
+  .eyebrow {
+    color: #c9a55b;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    font-weight: 800;
+    margin: 0 0 18px;
+  }
+
+  .intro h1 {
+    color: #fff;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+
+  .intro h1 span {
+    color: #c9a55b;
+  }
+
+  .description {
+    color: #999;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-top: 30px;
+  }
+
+  /* RIGHT */
+
+  .box {
+    background: #111;
+    border: 1px solid #252525;
+    padding: 38px;
+  }
+
+  .contact-item {
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #252525;
+  }
+
+  .contact-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .contact-item small {
+    display: block;
+    color: #c9a55b;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .contact-item h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .booking p {
+    color: #999;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 800px) {
+    .contact {
+      grid-template-columns: 1fr;
+      gap: 45px;
+      padding: 80px 22px;
+      align-items: start;
+    }
+
+    .intro h1 {
+      font-size: clamp(42px, 12vw, 60px);
+    }
+
+    .description {
+      font-size: 16px;
+    }
+
+    .box {
+      padding: 30px;
+    }
+  }
+</style>
