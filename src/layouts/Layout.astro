@@ -1,5 +1,109 @@
 ---
 import '../../public/styles/global.css';
-const { title='Shellify Offroad | 4×4 Accessories & Vehicle Detailing Sydney', description='Shellify Offroad — 4×4 accessories, professional installation and vehicle detailing in Sydney.' }=Astro.props;
+
+const {
+  title = 'Shellify Offroad | 4×4 Accessories & Mobile Detailing Sydney',
+  description = 'Shellify Offroad offers 4×4 accessories, professional installation and mobile vehicle detailing across Sydney, with a focus on BYD Shark 6 and modern utes.'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, 'https://shellifyoffroad.com.au');
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{title}</title><meta name="description" content={description}><link rel="canonical" href={`https://shellifyoffroad.com.au${Astro.url.pathname}`}></head><body><slot /></body></html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+
+    <title>{title}</title>
+
+    <meta
+      name="description"
+      content={description}
+    />
+
+    <meta
+      name="robots"
+      content="index, follow"
+    />
+
+    <link
+      rel="canonical"
+      href={canonicalURL}
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:title"
+      content={title}
+    />
+
+    <meta
+      property="og:description"
+      content={description}
+    />
+
+    <meta
+      property="og:url"
+      content={canonicalURL}
+    />
+
+    <meta
+      property="og:site_name"
+      content="Shellify Offroad"
+    />
+
+    <meta
+      property="og:image"
+      content="https://shellifyoffroad.com.au/images/hero.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content={title}
+    />
+
+    <meta
+      name="twitter:description"
+      content={description}
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://shellifyoffroad.com.au/images/hero.jpg"
+    />
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "AutomotiveBusiness",
+        "name": "Shellify Offroad",
+        "url": "https://shellifyoffroad.com.au",
+        "description": "4×4 accessories, professional installation and mobile vehicle detailing in Sydney.",
+        "areaServed": {
+          "@type": "City",
+          "name": "Sydney"
+        },
+        "sameAs": []
+      })}
+    </script>
+
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
